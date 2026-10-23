@@ -5,6 +5,7 @@
 一行命令起一个网关，让 GPT-SoVITS 能被 **OpenAI 兼容客户端**、**SillyTavern**、以及任何走 HTTP 的 TTS 前端直接调用。
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/zyqchanel-06/gpt-sovits-gateway?color=blue)](https://github.com/zyqchanel-06/gpt-sovits-gateway/releases)
 [![Node](https://img.shields.io/badge/node-18%2B-brightgreen.svg)](https://nodejs.org/)
 [![Dependencies](https://img.shields.io/badge/runtime%20deps-zero-brightgreen.svg)](#)
 
