@@ -9,6 +9,8 @@
 [![Node](https://img.shields.io/badge/node-18%2B-brightgreen.svg)](https://nodejs.org/)
 [![Dependencies](https://img.shields.io/badge/runtime%20deps-zero-brightgreen.svg)](#)
 
+![OpenAI 兼容接口调用与 /health 统计](docs/screenshots/api-call.svg)
+
 ---
 
 ## 为什么需要这一层

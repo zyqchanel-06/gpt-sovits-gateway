@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="771" viewBox="0 0 1180 771">
+<rect x="0" y="0" width="1180" height="771" rx="10" fill="#0d1117"/>
+<rect x="0" y="0" width="1180" height="42" rx="10" fill="#161b22"/>
+<rect x="0" y="32" width="1180" height="10" rx="0" fill="#161b22"/>
+<circle cx="22" cy="21" r="6" fill="#ff5f56"/>
+<circle cx="42" cy="21" r="6" fill="#ffbd2e"/>
+<circle cx="62" cy="21" r="6" fill="#27c93f"/>
+<text x="1006" y="26" font-family="Consolas, Menlo, monospace" font-size="13" fill="#6e7681">gpt-sovits-gateway</text>
+<text x="26" y="66" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">$ node src/cli.mjs serve --config config.json</text>
+<text x="26" y="93" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#6e7681" xml:space="preserve">[INFO] 网关已启动 http://127.0.0.1:9881 -&gt; http://127.0.0.1:9880</text>
+<text x="26" y="120" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#6e7681" xml:space="preserve">[INFO] 声线: nahida | 默认: nahida</text>
+<text x="26" y="174" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">$ curl -X POST http://127.0.0.1:9881/v1/audio/speech \</text>
+<text x="26" y="201" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">    -H "Content-Type: application/json" \</text>
+<text x="26" y="228" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">    -d '{"input":"你好，这是通过网关合成的一段测试语音。",</text>
+<text x="26" y="255" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">         "voice":"nahida","response_format":"mp3"}' \</text>
+<text x="26" y="282" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">    --output hello.mp3</text>
+<text x="26" y="336" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">HTTP 200 · audio/mpeg · 57.4 KB · 3.4s</text>
+<text x="26" y="390" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">$ curl -s http://127.0.0.1:9881/health</text>
+<text x="26" y="417" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">{</text>
+<text x="26" y="444" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  "service": "gpt-sovits-gateway",</text>
+<text x="26" y="471" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  "ok": true,</text>
+<text x="26" y="498" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#79c0ff" xml:space="preserve">  "upstreamUp": true,</text>
+<text x="26" y="525" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">  "stats": {</text>
+<text x="26" y="552" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">    "requests": 1,</text>
+<text x="26" y="579" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#7ee787" xml:space="preserve">    "ok": 1,</text>
+<text x="26" y="606" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">    "lastMs": 3372,</text>
+<text x="26" y="633" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">    "lastSeconds": 3.58,</text>
+<text x="26" y="660" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">    "lastChars": 19</text>
+<text x="26" y="687" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">  }</text>
+<text x="26" y="714" font-family="Cascadia Code, Consolas, Menlo, monospace" font-size="15" fill="#c9d1d9" xml:space="preserve">}</text>
+</svg>
