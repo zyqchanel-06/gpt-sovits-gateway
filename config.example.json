@@ -1,0 +1,23 @@
+{
+  "host": "127.0.0.1",
+  "port": 9881,
+  "apiBase": "http://127.0.0.1:9880",
+  "timeoutMs": 300000,
+  "maxChars": 500,
+  "textLang": "auto",
+  "ffmpegPath": null,
+  "logFile": null,
+  "defaultVoice": "default",
+  "voices": [
+    {
+      "id": "default",
+      "name": "Default",
+      "lang": "zh",
+      "refAudio": "D:/voices/ref/default.wav",
+      "promptText": "这是参考音频对应的文本，必须与音频逐字一致。",
+      "promptLang": "zh",
+      "gpt": "",
+      "sovits": ""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+node_modules/
+*.log
+logs/
+config.json
+out/
+*.mp3
+*.wav
+_test_out.txt
+.DS_Store
+Thumbs.db

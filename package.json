@@ -1,0 +1,38 @@
+{
+  "name": "gpt-sovits-gateway",
+  "version": "0.1.0",
+  "description": "把 GPT-SoVITS 包装成 OpenAI 兼容 / GPT-SoVITS-Adapter 兼容的 TTS 网关：解决非标准接口、CORS、格式转换三个问题",
+  "type": "module",
+  "main": "./src/server.mjs",
+  "bin": {
+    "sovits-gateway": "./src/cli.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src",
+    "docs",
+    "config.example.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test tests/gateway.test.mjs",
+    "start": "node src/cli.mjs serve"
+  },
+  "keywords": [
+    "gpt-sovits",
+    "tts",
+    "openai-compatible",
+    "sillytavern",
+    "text-to-speech",
+    "voice-clone"
+  ],
+  "license": "MIT",
+  "author": "zyqchanel-06",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zyqchanel-06/gpt-sovits-gateway.git"
+  }
+}
