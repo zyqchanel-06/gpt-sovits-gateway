@@ -21,9 +21,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 语法检查（所有模块都能被解析）
+      - name: 语法检查
         run: |
-          for f in src/*.mjs; do node --check "$f"; done
+          for f in src/*.mjs; do
+            echo "-- $f"
+            node --check "$f"
+          done
 
       - name: 单元测试（假上游，不需要 GPT-SoVITS）
         run: node --test tests/gateway.test.mjs
@@ -31,6 +34,6 @@ jobs:
       - name: CLI 帮助可用
         run: node src/cli.mjs help
 
-      - name: 配置校验（示例配置能被加载）
-        # 示例里 refAudio 指向不存在的路径没关系——校验只检查字段齐全
-        run: node -e "import('./src/config.mjs').then(m => { const c = m.loadConfig({ path: 'config.example.json' }); console.log('voices:', c.voices.map(v => v.id).join(',')); })"
+      - name: 示例配置可加载
+        run: |
+          node --input-type=module -e "import { loadConfig } from './src/config.mjs'; const c = loadConfig({ path: 'config.example.json' }); console.log('voices:', c.voices.map(v => v.id).join(','));"
