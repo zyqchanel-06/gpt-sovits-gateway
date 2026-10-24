@@ -13,6 +13,9 @@
 
 ---
 
+> **想从零跑通整套流程？看 [保姆级教程](https://github.com/zyqchanel-06/gpt-sovits-trainer/blob/main/docs/tutorial.md)**
+> 装环境 → 准备素材 → 训练音色 → 起服务 → 接进你的 AI，附常见报错排查。
+
 ## 为什么需要这一层
 
 GPT-SoVITS 自带的 `api_v2` 服务有三个硬伤，导致标准 TTS 客户端接不上：
