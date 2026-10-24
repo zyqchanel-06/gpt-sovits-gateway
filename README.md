@@ -25,6 +25,27 @@ GPT-SoVITS 自带的 `api_v2` 服务有三个硬伤，导致标准 TTS 客户端
 
 也就是说：**GPT-SoVITS 负责「像谁说」，本网关负责「怎么被调用」。**
 
+## 和社区其他方案的区别
+
+GPT-SoVITS 生态里有几个解决同类问题的项目，做法不同，适合的场景也不同：
+
+| 方案 | 思路 | 适合谁 |
+| --- | --- | --- |
+| [jianchang512/gptsovits-api](https://github.com/jianchang512/gptsovits-api) | 提供改好的 `api2.py`，**替换**你 GPT-SoVITS 目录里的官方 `api.py` | 只想修好官方接口、不介意改上游文件 |
+| [ben0oil1/GPT-SoVITS-Server](https://github.com/ben0oil1/GPT-SoVITS-Server) | 从主项目**提取**出极简推理服务（仅中文） | 想在低配/无 GPU 机器上只跑推理 |
+| **本项目** | **独立网关**，不碰上游任何文件，把上游包装成标准协议 | 想把 GPT-SoVITS 接进现成客户端（OpenAI 兼容 / SillyTavern 等） |
+
+三个关键差异：
+
+1. **不改上游**：本网关是独立进程，上游怎么升级都不影响它；那两类方案需要你把文件放进 GPT-SoVITS 目录，升级时要重新处理
+2. **协议标准化**：OpenAI 兼容意味着 ChatGPT 生态里的 TTS 客户端、朗读插件、语音助手都能直接连——这是「改好的 api.py」做不到的
+3. **保留多语言**：不失聪日语/英语（上游支持什么，这里就支持什么）
+
+> 说句公道话：如果你只是想在本机把官方接口修得好用一点，`gptsovits-api` 更轻；
+> 如果你要在手机或纯 CPU 服务器上跑推理，`GPT-SoVITS-Server` 更合适。
+> 本项目的定位是**接入层**——只解决「怎么被调用」，不解决「跑在哪」。
+
+---
 ## 特性
 
 - **两种协议同时支持** —— OpenAI 兼容 + GPT-SoVITS-Adapter 兼容，一套配置两种用法
