@@ -196,6 +196,36 @@ npm test
 
 13 个用例，全部用假上游跑，**不需要真的 GPT-SoVITS 和显卡**。
 
+## Roadmap
+
+**已完成**
+- OpenAI 兼容 `POST /v1/audio/speech` + Adapter 协议 `POST /`
+- CORS 与 OPTIONS 预检
+- mp3 输出（编码器三级回退）
+- 多声线切换、串行合成防 OOM、截断自检重试
+
+**计划中**
+- 流式输出（边合成边返回，降低首字延迟）
+- 更多客户端接入示例（Open WebUI、SillyTavern、各类朗读插件）
+
+**暂不考虑**
+- 内置训练功能（用 [gpt-sovits-trainer](https://github.com/zyqchanel-06/gpt-sovits-trainer)）
+- 云端部署方案（本项目定位是本机内网服务）
+
+---
+
+## 参与与反馈
+
+测试使用假上游，**不需要真的 GPT-SoVITS 在跑**：
+
+```bash
+npm test
+```
+
+新增端点请同时补：协议文档（README 的「端点」一节）、测试用例、以及一个真实调用示例。
+
+---
+
 ## License
 
 MIT —— 见 [LICENSE](LICENSE)。
